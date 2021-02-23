@@ -7,7 +7,9 @@
           <v-img :src="providerLogo"></v-img>
         </v-list-item-avatar>
         <v-list-item-content>
-          <v-list-item-title class="title"> Al Amanah </v-list-item-title>
+          <v-list-item-title class="title">
+            Yayasan Al Amanah
+          </v-list-item-title>
           <v-list-item-subtitle> {{ providerName }} </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>

@@ -34,9 +34,9 @@ export default class AppLayout extends Vue {
   rightDrawer = false;
   providerId = 'admin';
   providerName = 'Admin';
-  providerLogo = require(`~/assets/images/rw05-logo.png`);
+  providerLogo = require(`~/assets/images/alamanah-logo.png`);
   profileName = 'admin';
-  profilePicture = require(`~/assets/images/rw05-logo.png`);
+  profilePicture = require(`~/assets/images/alamanah-logo.png`);
   profileEmail = 'admin@email.id';
   access = '*';
   isUpdate = false;
@@ -119,6 +119,87 @@ export default class AppLayout extends Vue {
       title: 'Tugas',
       active: true,
       to: '/admin/tasks'
+    },
+    {
+      id: 'transaction',
+      icon: 'cash-multiple',
+      title: 'Transaksi',
+      active: true,
+      to: '/admin/transaction',
+      items: [
+        {
+          id: 'transaction-in',
+          title: 'Pemasukan',
+          active: true,
+          to: '/admin/transaction/in'
+        },
+        {
+          id: 'transaction-out',
+          title: 'Pengeluaran',
+          active: true,
+          to: '/admin/transaction/out'
+        },
+        {
+          id: 'transaction-transfer',
+          title: 'Transfer',
+          active: true,
+          to: '/admin/transaction/transfer'
+        }
+      ]
+    },
+    {
+      id: 'report',
+      icon: 'file-document-outline',
+      title: 'Laporan',
+      active: true,
+      to: '/admin/report',
+      items: [
+        {
+          id: 'report-monthly',
+          title: 'Laporan Bulanan',
+          active: true,
+          to: '/admin/report/monthly'
+        },
+        {
+          id: 'report-yearly',
+          title: 'Laporan Tahunan',
+          active: true,
+          to: '/admin/report/yearly'
+        }
+      ]
+    },
+    {
+      id: 'utility',
+      icon: 'cog',
+      title: 'Utility',
+      active: true,
+      to: '/admin/tasks',
+      items: [
+        {
+          id: 'utility-group-in',
+          title: 'Group Pemasukan',
+          active: true,
+          to: '/admin/utility/groupin'
+        },
+        {
+          id: 'utility-group-out',
+          title: 'Group Pengeluaran',
+          active: true,
+          to: '/admin/utility/groupout'
+        },
+        {
+          id: 'utility-type-in',
+          title: 'Jenis Pemasukan',
+          active: true,
+          to: '/admin/utility/typein'
+        },
+        {
+          id: 'utility-type-out',
+          title: 'Jenis Pengeluaran',
+          active: true,
+          to: '/admin/utility/typeout'
+        }
+      ]
     }
   ];
 }

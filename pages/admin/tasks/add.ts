@@ -15,6 +15,7 @@ export default class AddTaskPage extends Vue {
   @State((state) => state.task.list) tasks: Task[];
   title: string = '';
   description: string = '';
+  loading = false;
 
   mounted() {
     this.changeTitle('Buat Tugas Baru');
@@ -38,6 +39,6 @@ export default class AddTaskPage extends Vue {
       title: this.title,
       description: this.description
     });
-    this.$router.push({ path: '/tasks' });
+    this.$router.push({ path: '/admin/tasks' });
   }
 }
