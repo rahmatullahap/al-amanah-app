@@ -1,7 +1,7 @@
 <template>
   <v-app dark>
     <!-- left menu -->
-    <v-navigation-drawer :mini-variant="leftDrawer" class="primary" fixed app>
+    <v-navigation-drawer v-model="leftDrawer" class="primary" fixed app>
       <v-list-item>
         <v-list-item-avatar>
           <v-img :src="providerLogo"></v-img>
@@ -54,14 +54,14 @@
       </v-list>
 
       <template v-slot:append>
-        <div v-if="!leftDrawer" class="pa-2">
+        <div v-if="leftDrawer" class="pa-2">
           <v-btn class="secondary" block @click="logout"> Logout </v-btn>
         </div>
-        <div v-if="leftDrawer" class="pa-2">
+        <!-- <div v-if="leftDrawer" class="pa-2">
           <v-btn icon @click="logout">
             <v-icon color="white">mdi-logout</v-icon>
           </v-btn>
-        </div>
+        </div> -->
       </template>
     </v-navigation-drawer>
 

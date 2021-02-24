@@ -75,8 +75,8 @@ const config: Configuration = {
       }
     },
     manifest: {
-      name: 'Al Amanah',
-      short_name: 'Al Amanah'
+      name: 'Yayasan Al Amanah',
+      short_name: 'Al-Amanah'
     }
   },
   /*

@@ -16,4 +16,4 @@ jobs:
           projectId: alamanah-app
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
-      - run: npm run deploy
+          npm_package_name: Yayasan Al Amanah

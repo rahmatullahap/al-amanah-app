@@ -6,11 +6,6 @@ import { Component, Vue } from 'vue-property-decorator';
 @Component
 export default class IndexPage extends Vue {
   loading = false;
-  selection = 'event';
-
-  icons = ['mdi-home', 'mdi-email', 'mdi-calendar', 'mdi-delete'];
-
-  variant = 'default';
 
   title = 'Landing Page';
 
