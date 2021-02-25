@@ -79,6 +79,7 @@ const config: Configuration = {
       short_name: 'Al-Amanah'
     }
   },
+  serverMiddleware: [{ path: '/api', handler: '~/middleware/rest.ts' }],
   /*
    ** Customize the progress-bar color
    */
