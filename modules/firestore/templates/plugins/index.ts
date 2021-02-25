@@ -4,23 +4,11 @@ import { FirestoreClient } from './firestore';
 
 const firestoreApiPlugin: Plugin = async (ctx, inject) => {
   // configurations
-  const apiKey = '<%= options.apiKey %>';
-  const authDomain = '<%= options.authDomain %>';
-  const projectId = '<%= options.projectId %>';
-  const storageBucket = '<%= options.storageBucket %>';
-  const messagingSenderId = '<%= options.messagingSenderId %>';
-  const appId = '<%= options.appId %>';
-  const measurementId = '<%= options.measurementId %>';
+  const firebaseConfig = '<%= options.firebaseConfig %>';
 
   // configure clients
   const firestoreClient = new FirestoreClient({
-    apiKey,
-    authDomain,
-    projectId,
-    storageBucket,
-    messagingSenderId,
-    appId,
-    measurementId
+    firebaseConfig
   });
   const client = await firestoreClient.createFirestoreClient();
 
