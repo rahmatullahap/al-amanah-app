@@ -1,3 +1,4 @@
+import firebase from 'firebase';
 import { Component, Vue, Watch } from 'vue-property-decorator';
 import { State, Mutation } from 'vuex-class';
 import InitialFilter from '~/filters/initial';
@@ -69,7 +70,8 @@ export default class AppLayout extends Vue {
   /**
    * exit to login page
    */
-  logout() {
+  async logout() {
+    await firebase.auth().signOut();
     this.$router.push({ path: '/login' });
   }
 

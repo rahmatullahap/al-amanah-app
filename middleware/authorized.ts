@@ -1,11 +1,12 @@
 import { Middleware } from '@nuxt/types';
+import firebase from 'firebase';
 
 const authorized: Middleware = (ctx) => {
-  // get token from backend
-  const ok = localStorage.getItem('backend/config');
-  if (!ok) {
-    return ctx.redirect('/login');
-  }
+  firebase.auth().onAuthStateChanged(function (retUser) {
+    if (!retUser) {
+      return ctx.redirect('/login');
+    }
+  });
 };
 
 export default authorized;

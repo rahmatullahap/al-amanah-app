@@ -12,10 +12,10 @@
                 <v-card-text>
                   <v-form>
                     <v-text-field
-                      v-model="username"
-                      label="Username"
-                      type="text"
-                      name="username"
+                      v-model="email"
+                      label="Email"
+                      type="email"
+                      name="email"
                       append-icon="mdi-account"
                       filled
                     ></v-text-field>
