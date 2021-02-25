@@ -2,7 +2,13 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 
 export interface FirestoreClientConfig {
-  firebaseConfig: string;
+  apiKey: string;
+  authDomain: string;
+  projectId: string;
+  storageBucket: string;
+  messagingSenderId: string;
+  appId: string;
+  measurementId: string;
 }
 
 declare module 'vue/types/vue' {

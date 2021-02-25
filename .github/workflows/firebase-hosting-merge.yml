@@ -20,7 +20,6 @@ jobs:
           FIREBASE_AUTH_DOMAIN: alamanah-app.firebaseapp.com
           FIREBASE_PROJECT_ID: alamanah-app
           FIREBASE_STORAGE_BUCKET: alamanah-app.appspot.com
-          FREBASE_CONFIG: '${{ secrets.FREBASE_CONFIG }}'
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'

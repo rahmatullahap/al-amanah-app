@@ -2,7 +2,13 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 
 export interface FirestoreClientConfig {
-  firebaseConfig: string;
+  apiKey: string;
+  authDomain: string;
+  projectId: string;
+  storageBucket: string;
+  messagingSenderId: string;
+  appId: string;
+  measurementId: string;
 }
 
 export class FirestoreClient {
@@ -11,7 +17,7 @@ export class FirestoreClient {
 
   createFirestoreClient(): firebase.firestore.Firestore {
     try {
-      firebase.initializeApp(JSON.parse(this.config.firebaseConfig));
+      firebase.initializeApp(this.config);
     } catch (error) {
       // eslint-disable-next-line no-console
       console.log(error);
