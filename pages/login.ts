@@ -1,5 +1,6 @@
 import { Component, Vue } from 'vue-property-decorator';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 /**
  * Login page

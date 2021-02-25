@@ -1,4 +1,5 @@
-import firebase from 'firebase';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 import { Component, Vue, Watch } from 'vue-property-decorator';
 import { State, Mutation } from 'vuex-class';
 import InitialFilter from '~/filters/initial';
